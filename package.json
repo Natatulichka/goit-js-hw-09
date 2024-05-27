@@ -1,19 +1,23 @@
 {
-  "name": "js-theorety",
-  "version": "1.0.0",
-  "description": "",
+  "name": "vanilla-app-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "push": "git add .; git commit -m 'update'; git push;"
+    "dev": "vite",
+    "build": "vite build --base=/vanilla-app-vite/",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GoITteacher/js-theorety-template.git"
+  "devDependencies": {
+    "glob": "^8.1.0",
+    "vite": "^4.5.2"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GoITteacher/js-theorety-template/issues"
-  },
-  "homepage": "https://github.com/GoITteacher/js-theorety-template#readme"
+  "dependencies": {
+    "modern-normalize": "^2.0.0",
+    "swiper": "^11.0.7",
+    "vite-plugin-full-reload": "^1.0.5",
+    "vite-plugin-html-inject": "^1.0.1"
+  }
 }
