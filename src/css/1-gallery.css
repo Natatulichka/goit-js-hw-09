@@ -1,7 +1,6 @@
 .gallery {
   list-style-type: none;
   max-width: 1128px;
-  height: 648px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
