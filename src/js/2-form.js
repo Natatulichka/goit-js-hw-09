@@ -1,18 +1,42 @@
-const form = document.querySelector('.login-form');
+const form = document.querySelector('.feedback-form');
+const messageTextarea = form.querySelector('textarea[name="message"]');
+const input = document.querySelectorAll('.feedback-form input');
+input.forEach(element => {
+  element.classList.add('feedback-form-input');
+});
+messageTextarea.classList.add('feedback-form-textarea');
+document
+  .querySelector('.feedback-form button')
+  .classList.add('feedback-form-button');
+// --------------
+let formData = {
+  email: '',
+  message: '',
+};
+function addToLocalStorage() {
+  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+}
+function fillFormLocalStorage() {
+  const savedData = localStorage.getItem('feedback-form-state');
+  if (savedData) {
+    formData = JSON.parse(savedData);
+    emailInput.value = formData.email;
+    messageTextarea.value = formData.message;
+  }
+}
+form.addEventListener('input', event => {
+  formData[event.target.name] = event.target.value;
+  addToLocalStorage();
+});
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-  const email = form.elements.email.value.trim();
-  const password = form.elements.password.value.trim();
-  if (email === '' || password === '') {
-    alert('All form fields must be filled in');
+
+  if (!formData.email || !formData.message) {
+    alert('Fill please all fields');
   } else {
-    const formData = { email: email, password: password };
     console.log(formData);
+    localStorage.removeItem('feedback-form-state');
+    formData = { email: '', message: '' };
     form.reset();
   }
 });
-const input = document.querySelectorAll('.login-form input');
-input.forEach(element => {
-  element.classList.add('login-form-input');
-});
-document.querySelector('.login-form button').classList.add('login-form-button');
