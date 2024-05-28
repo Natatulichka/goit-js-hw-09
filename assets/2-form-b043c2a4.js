@@ -1,0 +1,2 @@
+const e=document.querySelector(".login-form");e.addEventListener("submit",function(o){o.preventDefault();const t=e.elements.email.value.trim(),l=e.elements.password.value.trim();t===""||l===""?alert("All form fields must be filled in"):(console.log({email:t,password:l}),e.reset())});const n=document.querySelectorAll(".login-form input");n.forEach(o=>{o.classList.add("login-form-input")});document.querySelector(".login-form button").classList.add("login-form-button");
+//# sourceMappingURL=2-form-b043c2a4.js.map
