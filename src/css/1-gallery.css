@@ -14,5 +14,8 @@
 .gallery img {
   object-fit: cover;
 }
+.has-lightbox {
+  background: rgba(46, 47, 66, 0.8);
+}
 
 @import 'simplelightbox/dist/simple-lightbox.min.css';
