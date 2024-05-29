@@ -1,5 +1,6 @@
 const form = document.querySelector('.feedback-form');
 const messageTextarea = form.querySelector('textarea[name="message"]');
+const emailInput = form.querySelector('input[name="email"]');
 const input = document.querySelectorAll('.feedback-form input');
 input.forEach(element => {
   element.classList.add('feedback-form-input');
@@ -40,3 +41,5 @@ form.addEventListener('submit', function (event) {
     form.reset();
   }
 });
+
+fillFormLocalStorage();
