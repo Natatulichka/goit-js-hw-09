@@ -12,12 +12,20 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <ul>
-      <li><a href="./1-gallery.html">Gallery</a></li>
-      <li><a href="./2-form.html">Form</a></li>
-      <li><a href="./3-form.html">Form</a></li>
-    </ul>
+    <p><a href="./index.html">Go back</a></p>
 
-    <script src="./js/main.js" defer></script>
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        Email
+        <input type="email" name="email" autofocus />
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="8"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script type="module" src="./js/3-form.js" defer></script>
   </body>
 </html>
