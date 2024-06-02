@@ -44,10 +44,10 @@ function loadFromLS(key) {
     return json;
   }
 }
-
+// виведення данних з локального сховища у браузер після оновлення сторінки й робимо перевірку на той випадок, якщо нема данних у локалсторідж
 window.addEventListener('DOMContentLoaded', () => {
   const data = loadFromLS('feedback-form-state');
 
-  form.elements.email.value = data?.email ?? '';
-  form.elements.message.value = data?.message ?? '';
+  form.elements.email.value = data?.email || '';
+  form.elements.message.value = data?.message || '';
 });
